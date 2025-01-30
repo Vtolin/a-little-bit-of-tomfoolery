@@ -6,6 +6,28 @@ html, body {
     font-family: sans-serif;
 }
 
+body{
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+body.dark-mode .b1,
+body.dark-mode .b2 {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode .b1:hover,
+body.dark-mode .b2:hover {
+    background-color: #555;
+    border-color: #777;
+}
+
 .tac {
     position: fixed; 
     top: 0;
@@ -33,13 +55,18 @@ video {
     display: flex;
 }
 
-.b1, .b2{
+.b1, .b2, #dark-mode-toggle{
     padding: 10px 20px;
     margin: 0 5px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     border: 3px solid black;
+}
+
+#dark-mode-toggle:hover{
+    background-color: black;
+    color: white;
 }
 
 .b1{
